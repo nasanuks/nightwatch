@@ -1,0 +1,44 @@
+{
+  "src_folders" : ["./examples/tests", "./examples/unittests"],
+  "output_folder" : "./examples/reports",
+
+  "selenium" : {
+    "start_process" : true,
+    "server_path" : "./selenium-server2.53.1.jar",
+    "log_path" : "",
+    "host" : "127.0.0.1",
+    "port" : 4444,
+    "cli_args" : {
+      "webdriver.chrome.driver" : "",
+      "webdriver.ie.driver" : ""
+    }
+  },
+
+  "test_settings" : {
+    "default" : {
+      "launch_url" : "http://localhost",
+      "selenium_port"  : 4444,
+      "selenium_host"  : "localhost",
+      "silent": true,
+      "screenshots" : {
+        "enabled" : false,
+        "path" : ""
+      },
+      "desiredCapabilities": {
+        "browserName": "chrome",
+        "javascriptEnabled": true,
+        "acceptSslCerts": true
+      },
+      "exclude" : "./examples/unittests/*"
+    },
+
+    "unittests" : {
+      "selenium" : {
+        "start_process" : false,
+        "start_session" : false
+      },
+      "filter" : "./examples/unittests/*",
+      "exclude" : ""
+    }
+  }
+}
