@@ -1,5 +1,5 @@
 {
-  "src_folders" : ["./examples/tests", "./examples/unittests"],
+  "src_folders": ["./tests"],
   "output_folder" : "./examples/reports",
 
   "selenium" : {
